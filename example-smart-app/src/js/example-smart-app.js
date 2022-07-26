@@ -32,7 +32,7 @@
           var allergy = smart.patient.api.fetchAll({
               type: 'AllergyIntolerance',
               query: {
-                clinicalstatus: 'active'
+                "clinical-status": 'active'
             }
           });
 
