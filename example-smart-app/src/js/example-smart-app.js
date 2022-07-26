@@ -124,8 +124,7 @@
   function getAllergies(all) {
     var allList = '';
     all.forEach(function(allergy){
-
-      allList = allList + "<div>" + allergy.code.text + "</div>";
+      allList = allList + "<div> " + allergy.code.text + "</div>";
     });
     return allList;
   }
