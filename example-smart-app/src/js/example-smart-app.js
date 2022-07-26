@@ -30,10 +30,10 @@
                     }
                   });       
           var allergy = smart.patient.api.fetchAll({
-              type: 'AllergyIntolerance'
-             // query: {
-            //    ""clinical-status": "active""
-            //  }
+              type: 'AllergyIntolerance',
+             query: {
+               "clinical-status": "active"
+              }
           });
 
         $.when(pt, obv,allergy).fail(onError);
@@ -41,6 +41,7 @@
         $.when(pt, obv,allergy).done(function(patient, obv,all) {
           console.log("here");
           console.log(all);
+          console.log(all[0.]);
           
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
