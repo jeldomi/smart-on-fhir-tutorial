@@ -43,6 +43,7 @@
           //console.log(all);
           console.log(all[0]);
           console.log(all[0].code.text);
+
           
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
@@ -86,6 +87,7 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
           p.temp = getQuantityValueAndUnit(temp[0]);
+          p.allergy = all[0].code.text;
 
           console.log( p.temp);
 
@@ -113,6 +115,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       temp: {value: ''},
+      allergy: {value: ''},
     };
   }
 
@@ -157,6 +160,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#temp').html(p.temp);
+    $('#allergy').html(p.allergy);
   };
 
 })(window);
