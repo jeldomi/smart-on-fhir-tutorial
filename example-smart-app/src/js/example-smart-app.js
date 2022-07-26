@@ -54,7 +54,7 @@
           var ldl = byCodes('2089-1');
           var temp = byCodes('8310-5');
 
-          console.log(temp);
+          
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -73,6 +73,10 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+
+          p.temp = getQuantityValueAndUnit(temp[0]);
+
+          console.log( p.temp);
 
           ret.resolve(p);
         });
