@@ -87,7 +87,9 @@
           p.ldl = getQuantityValueAndUnit(ldl[0]);
 
           p.temp = getQuantityValueAndUnit(temp[0]);
-          p.allergy = all[0].code.text;
+         // p.allergy = all[0].code.text;
+         
+          p.allergy = getAllergies(all);
 
           console.log( p.temp);
 
@@ -117,6 +119,14 @@
       temp: {value: ''},
       allergy: {value: ''},
     };
+  }
+
+  function getAllergies(all) {
+    var allList = '';
+    all.forEach(function(allergy){
+      allList = allList + allergy.code.text;
+    });
+    return allList;
   }
 
   function getBloodPressureValue(BPObservations, typeOfPressure) {
