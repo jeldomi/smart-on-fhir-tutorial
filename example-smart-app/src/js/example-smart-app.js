@@ -41,6 +41,7 @@
         $.when(pt, obv,allergy).done(function(patient, obv,all) {
           console.log("here");
           //console.log(all);
+          console.log(all[0]);
           console.log(all[0].category);
           
           var byCodes = smart.byCodes(obv, 'code');
