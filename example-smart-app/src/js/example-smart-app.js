@@ -101,6 +101,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      temp: {value: ''},
     };
   }
 
@@ -144,6 +145,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#temp').html(p.temp);
   };
 
 })(window);
